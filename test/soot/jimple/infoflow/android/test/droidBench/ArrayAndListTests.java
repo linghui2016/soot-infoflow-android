@@ -10,6 +10,7 @@
  ******************************************************************************/
 package soot.jimple.infoflow.android.test.droidBench;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Assert;
@@ -24,7 +25,7 @@ public class ArrayAndListTests extends JUnitTests {
 	@Test(timeout=300000)
 	@Ignore
 	public void runTestArrayAccess1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayAccess1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayAccess1.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
@@ -32,62 +33,62 @@ public class ArrayAndListTests extends JUnitTests {
 	@Test(timeout=300000)
 	@Ignore
 	public void runTestArrayAccess2() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayAccess2.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayAccess2.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestArrayAccess3() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayAccess3.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayAccess3.apk");
 		Assert.assertNotNull(res);
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestArrayAccess4() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayAccess4.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayAccess4.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestArrayAccess5() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayAccess5.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayAccess5.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
 
 	@Test(timeout=300000)
 	public void runTestArrayCopy1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayCopy1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayCopy1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestArrayToString1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ArrayToString1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ArrayToString1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	@Ignore
 	public void runTestHashMapAccess1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/HashMapAccess1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"HashMapAccess1.apk");
 		Assert.assertEquals(0, res.size());
 	}
 
 	@Test(timeout=300000)
 	@Ignore
 	public void runTestListAccess1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/ListAccess1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"ListAccess1.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
 
 	@Test(timeout=300000)
 	public void runTestMultidimensionalArray1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("ArraysAndLists/MultidimensionalArray1.apk");
+		InfoflowResults res = analyzeAPKFile("ArraysAndLists"+File.separator+"MultidimensionalArray1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 

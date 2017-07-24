@@ -10,6 +10,7 @@
  ******************************************************************************/
 package soot.jimple.infoflow.android.test.droidBench;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Assert;
@@ -17,80 +18,34 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.xmlpull.v1.XmlPullParserException;
 
-import soot.jimple.infoflow.android.InfoflowAndroidConfiguration;
 import soot.jimple.infoflow.results.InfoflowResults;
 
 public class ReflectionTests extends JUnitTests {
 	
-	private AnalysisConfigurationCallback enableReflectionCallback = new AnalysisConfigurationCallback() {
-		
-		@Override
-		public void configureAnalyzer(InfoflowAndroidConfiguration config) {
-			config.setEnableRefection(true);
-		}
-		
-	};
-	
 	@Test(timeout=300000)
 	public void runTestReflection1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection1.apk");
+		InfoflowResults res = analyzeAPKFile("Reflection"+File.separator+"Reflection1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 
-	@Test(timeout=300000)
-	public void runTestReflection2() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection2.apk", null,
-				enableReflectionCallback);
-		Assert.assertEquals(1, res.size());
-	}
-
-	@Test(timeout=300000)
-	public void runTestReflection3() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection3.apk", null,
-				enableReflectionCallback);
-		Assert.assertEquals(1, res.size());
-	}
-
-	@Test(timeout=300000)
-	public void runTestReflection4() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection4.apk", null,
-				enableReflectionCallback);
-		Assert.assertEquals(1, res.size());
-	}
-
-	@Test(timeout=300000)
-	public void runTestReflection5() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection5.apk", null,
-				enableReflectionCallback);
-		Assert.assertEquals(1, res.size());
-	}
-	
-	@Test(timeout=300000)
-	public void runTestReflection6() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection6.apk", null,
-				enableReflectionCallback);
-		Assert.assertEquals(1, res.size());
-	}
-	
 	@Test(timeout=300000)
 	@Ignore
-	public void runTestReflection7() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection7.apk", null,
-				enableReflectionCallback);
+	public void runTestReflection2() throws IOException, XmlPullParserException {
+		InfoflowResults res = analyzeAPKFile("Reflection"+File.separator+"Reflection2.apk");
 		Assert.assertEquals(1, res.size());
 	}
-	
+
 	@Test(timeout=300000)
-	public void runTestReflection8() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection8.apk", null,
-				enableReflectionCallback);
+	@Ignore
+	public void runTestReflection3() throws IOException, XmlPullParserException {
+		InfoflowResults res = analyzeAPKFile("Reflection"+File.separator+"Reflection3.apk");
 		Assert.assertEquals(1, res.size());
 	}
-	
+
 	@Test(timeout=300000)
-	public void runTestReflection9() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Reflection/Reflection9.apk", null,
-				enableReflectionCallback);
+	@Ignore
+	public void runTestReflection4() throws IOException, XmlPullParserException {
+		InfoflowResults res = analyzeAPKFile("Reflection"+File.separator+"Reflection4.apk");
 		Assert.assertEquals(1, res.size());
 	}
 

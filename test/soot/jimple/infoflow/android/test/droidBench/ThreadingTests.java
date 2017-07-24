@@ -10,6 +10,7 @@
  ******************************************************************************/
 package soot.jimple.infoflow.android.test.droidBench;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Assert;
@@ -22,43 +23,37 @@ public class ThreadingTests extends JUnitTests {
 	
 	@Test(timeout=300000)
 	public void runTestAsyncTask1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/AsyncTask1.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"AsyncTask1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 
 	@Test(timeout=300000)
 	public void runTestExecutor1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/Executor1.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"Executor1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 
 	@Test(timeout=300000)
 	public void runTestJavaThread1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/JavaThread1.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"JavaThread1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestJavaThread2() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/JavaThread2.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"JavaThread2.apk");
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestLooper1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/Looper1.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"Looper1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestTimerTask1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Threading/TimerTask1.apk");
-		Assert.assertNotNull(res);
+		InfoflowResults res = analyzeAPKFile("Threading"+File.separator+"TimerTask1.apk");
 		Assert.assertEquals(1, res.size());
 	}
 

@@ -10,6 +10,7 @@
  ******************************************************************************/
 package soot.jimple.infoflow.android.test.droidBench;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Assert;
@@ -23,7 +24,7 @@ public class AliasingTests extends JUnitTests {
 	
 	@Test(timeout=300000)
 	public void runTestFlowSensitivity1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Aliasing/FlowSensitivity1.apk");
+		InfoflowResults res = analyzeAPKFile("Aliasing"+File.separator+"FlowSensitivity1.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
@@ -31,21 +32,21 @@ public class AliasingTests extends JUnitTests {
 	@Test(timeout=300000)
 	@Ignore // not yet supported
 	public void runTestMerge1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Aliasing/Merge1.apk");
+		InfoflowResults res = analyzeAPKFile("Aliasing"+File.separator+"Merge1.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}
 	
 	@Test(timeout=300000)
 	public void runTestSimpleAliasing1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Aliasing/SimpleAliasing1.apk");
+		InfoflowResults res = analyzeAPKFile("Aliasing"+File.separator+"SimpleAliasing1.apk");
 		Assert.assertNotNull(res);
 		Assert.assertEquals(1, res.size());
 	}
 
 	@Test(timeout=300000)
 	public void runTestStrongUpdate1() throws IOException, XmlPullParserException {
-		InfoflowResults res = analyzeAPKFile("Aliasing/StrongUpdate1.apk");
+		InfoflowResults res = analyzeAPKFile("Aliasing"+File.separator+"StrongUpdate1.apk");
 		if (res != null)
 			Assert.assertEquals(0, res.size());
 	}

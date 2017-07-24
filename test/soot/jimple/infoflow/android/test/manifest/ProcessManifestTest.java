@@ -1,5 +1,6 @@
 package soot.jimple.infoflow.android.test.manifest;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -16,7 +17,7 @@ public class ProcessManifestTest
 		
 		try 
 		{
-			manifest = new ProcessManifest("testAPKs/enriched1.apk");
+			manifest = new ProcessManifest("testAPKs"+File.separator+"enriched1.apk");
 		} 
 		catch (IOException | XmlPullParserException e) 
 		{
@@ -46,7 +47,7 @@ public class ProcessManifestTest
 		
 		try 
 		{
-			manifest = new ProcessManifest("testAPKs/enriched1.apk");
+			manifest = new ProcessManifest("testAPKs"+File.separator+"enriched1.apk");
 		} 
 		catch (IOException | XmlPullParserException e) 
 		{
